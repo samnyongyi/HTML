@@ -1,0 +1,81 @@
+<!DOCTYPE html> <!--HTML5 문서임을 알리는 지시어-->
+<html>  <!--태그, 속성은 대소문자 구분이 없으며 속성 값에 불필요한 공백문자는 HTML5표준에 어긋나며 오류 야기-->
+    <head>  
+        <meta charset="utf-8">
+        <title>title태그를 이용한 타이틀 작성 예시</title>
+        
+        '메타데이터'는 데이터를 설명하는 데이터
+        HTML페이지에 대한 메타 데이터를 담기 위한 태그들로는 base, link, script, style, title, meta태그들이 존재
+        메타 태그들은 head태그 안에 작성하지만 script는 body태그 내에서도 작성 가능
+        <!--base태그 예시
+            base태그는 웹페이지가 저장되어 있는 기본 url과 페이지가 출력될 윈도우 지정
+            <a href="http://www.study.com/score/math.html">수학</a>
+            <a href="http://www.study.com/score/science.html">과학</a>
+            // math. html이나 science.html 웹페이지가 모두 http://www.study.com/score/에 있을경우 아래처럼 수정 가능
+        
+            <head>
+                <base href="http://www.study.com/score/">
+            </head>
+            <a href="math.html">수학</a>
+            <a href="science.html">과학</a>
+        -->
+
+        <!--link태그 예시
+            link태그는 외부 자원연결에 사용
+            <head>
+            <link type="text/css" rel="Stylesheet" href="mystyl.css">
+            </head>
+            // mystyle.css에 저장된 스타일 시트를 불러오도록 지시
+        -->
+    
+        <!--meta태그 예시
+            meta태그는 다양한 메타 데이터 표현
+            
+
+        -->
+    
+    </head>
+    <body> 
+        <h1 title="페이지 본문에 마우스가 올라갈때 설명문을 출력하는 title 속성예시">글자크기 예시</h1>
+        <h2>글자크기 비교</h2>
+        <h3>아래는 hr태그를 이용한 수평선 긋기 예시</h3>
+        <hr>
+        <p>단락을 나누는 p태그 예시</p>
+        <p> 기본은 한줄쓰기이다.               여러개의 빈 칸은 하나로 취급되며,
+            엔터 키 역시 하나의 빈칸으로 처리된다.
+        </p>
+        '<'는 &lt와 &gt를 이용하여 출력이 가능하다.
+        <br> br태그를 이용하여 새로운 줄로 전환이 가능하며 작성한 개수만큼 전환 가능
+        HTML5의 문자들은 유니코드 문자셋과 UTF-8 코드체계를 사용하며 예약어, 키보드로 입력이 가능하다.
+        <pre>
+            Enter, Tab, Space바는 
+            pre태그를 이용하지 않으면 무조건 공백하나로 인식되지만
+            pre태그를 이용시
+            사용자가 입력한 그대로 출력된다.
+        </pre>     
+        <b>b태그는 진하게</b><br>
+        <strong>strong태그와 b태그와 비슷한 효과</strong><br>
+        <br>
+        <em>em태그는 기울여서 출력</em><br>
+        <i>i는 이탤릭체</i><br>
+        <!--엔터는 body 태그내에서 출력 x, br태그를 이용하여 줄바꿈 가능-->
+        <del>del태그 예시</del><br>
+        <ins>ins태그 예시</ins><br>
+        
+        sup는 <sup>윗첨자</sup><br>
+        sub는 <sub>아래첨자</sub><br>
+        
+        블록태그는 항상 새라인에서 출력하며 양 옆에 다른 콘텐트를 배치하지않고 한라인을 독점하여 사용
+        p태그, h태그, div태그, ul태그 등이 있다.<br>
+        <div style="background-color:skyblue; padding:20px;">
+        div 예시와 <span style="color:red">사랑</span>예시   
+        div는 특별한 의미 없이 여러 HTML태그들을 블록으로 묶는 컨테이너로 이용
+        span는 텍스트 일부분에 특별한 모양을 주거나 JS코드로 텍스트 일부분을 제어하고자 할때 사용         
+        </div>
+        인라인 태그는 블록속에 삽입되어 블록의 일부로 출력
+        strong, a, img, span 태그 등이 있다.
+
+        
+
+    </body>
+</html> 
