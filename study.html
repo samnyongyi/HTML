@@ -2,11 +2,23 @@
 <html>  <!--태그, 속성은 대소문자 구분이 없으며 속성 값에 불필요한 공백문자는 HTML5표준에 어긋나며 오류 야기-->
     <head>  
         <meta charset="utf-8">
+        <!--meta태그 예시
+            meta태그는 다양한 메타 데이터 표현
+            1)웹페이지의 저작자를 표기하는 예시 
+            <meta name="author" content="조동현"
+            2)웹페이지의 내용 설명
+            <meta name="description" content="컴퓨터, 소프트웨어, 스마트폰"
+            3)웹페이지의 키워드(검색 엔진에 의해 검색되기 위해 작성)
+            <meta naem="keywords" content="컴퓨터, 소프트웨어, 스마트폰">
+            4)charset 속성으로 웹페이지에 사용하는 문자 코드 지정
+            <meta charset="utf-8"
+        -->
         <title>title태그를 이용한 타이틀 작성 예시</title>
-        
+        <!--
         '메타데이터'는 데이터를 설명하는 데이터
         HTML페이지에 대한 메타 데이터를 담기 위한 태그들로는 base, link, script, style, title, meta태그들이 존재
         메타 태그들은 head태그 안에 작성하지만 script는 body태그 내에서도 작성 가능
+        -->
         <!--base태그 예시
             base태그는 웹페이지가 저장되어 있는 기본 url과 페이지가 출력될 윈도우 지정
             <a href="http://www.study.com/score/math.html">수학</a>
@@ -26,20 +38,17 @@
             <link type="text/css" rel="Stylesheet" href="mystyl.css">
             </head>
             // mystyle.css에 저장된 스타일 시트를 불러오도록 지시
-        -->
-    
-        <!--meta태그 예시
-            meta태그는 다양한 메타 데이터 표현
-            
-
-        -->
-    
+        -->    
     </head>
     <body> 
+        <h5 id="앵커 사용하기"><p id="start">앵커 사용하기</p><br></h5>
+
         <h1 title="페이지 본문에 마우스가 올라갈때 설명문을 출력하는 title 속성예시">글자크기 예시</h1>
         <h2>글자크기 비교</h2>
+        
         <h3>아래는 hr태그를 이용한 수평선 긋기 예시</h3>
         <hr>
+
         <p>단락을 나누는 p태그 예시</p>
         <p> 기본은 한줄쓰기이다.               여러개의 빈 칸은 하나로 취급되며,
             엔터 키 역시 하나의 빈칸으로 처리된다.
@@ -73,9 +82,156 @@
         span는 텍스트 일부분에 특별한 모양을 주거나 JS코드로 텍스트 일부분을 제어하고자 할때 사용         
         </div>
         인라인 태그는 블록속에 삽입되어 블록의 일부로 출력
-        strong, a, img, span 태그 등이 있다.
+        strong, a, img, span 태그 등이 있다.<br>
+        상대경로는 ./을 사용하여 현재 폴더를 참조하고 ../는 현재 폴더에서 상위폴더를 참조<br>
+        절대경로는 http와 /을 사용하여 모든 주소 입력<br>
+        <!--
+        <img    src="이미지 파일의 url" // 필수 속성이므로 작성
+                alt"문자열" // 이미지가 없거나 손상되는 등 이미지를 출력할 수 없는 경우 출력되는 문자열, 필수 속성이므로 작성
+                width="이미지 폭"   // 생략시 원본 이미지의 폭, 픽셀수
+                height="이미지 높이">    //생략시 원본 이미지의 너비, 픽셀수
+        -->
+        <img src="./Img/XP-HD-Wallpapers-022.jpg" alt="이미지 출력 실패">
+        <!--ol태그는 순서있는 리스트
+                ol태그가 가지고 있는 type(마커)는 1(디폴트),A,a,I,i이고 start는 마커의 시작값을 입력하며 숫자에 대해서만 적용
+                li태그를 이용하여 아이템 작성
+        -->   
+        <ol type="1"
+            start="3">  <!--type는 생략가능-->
+            <li>코드 작성</li>
+            <li>코드 수정</li>
+        </ol><br>
+        <!-- ul은 순서 없는 리스트
+            아이템 작성시 마커로 표시
+        -->   
+         <ul>
+            <li>자바</li>
+            <li>C</li>
+            <li>HTML</li>
+        </ul><br>
+        <!--li태그는 리스트 아이템
+            <li type="1"|"A"|"a"|"I"|"i">아이템</li>
+            ol태그에 대해서만 유효
+        -->
+        <!--중첩 리스트 작성 예시-->
+        <ul>
+            <li>중첩 리스트를 작성</li>
+                <ul>
+                    <li>자바</li>
+                    <li>C</li>
+                    <li>HTML</li>
+                </ul>
+            <li>중복 리스트를 작성</li>
+                <ol type="A">
+                    <li>코드 작성</li>
+                    <li>코드 구동</li>
+                </ol>
+            <li>중복</li>
+            <li>리스트</li>
+        </ul>
+        <!--dl은 정의(설명) 리스트
+            용어와 설명을 하나의 아이템으로 나열하는 리스트
+        -->
+        <dl>
+            <dt><b>마이크로소프트</b></dt>
+            <dd>마이크로소프트는 미국 기업이다</dd>
+        </dl><br>
+        테이블 작성 예시
+        <table border="1">  <!--border을 이용하여 1픽셀의 테두리를 생성-->
+            <caption>테이블 예시 작성</caption>
+            <thead>
+                <tr><th>언어</th><th>상태</th></tr> <!--th는 열 제목 셀-->
+            </thead>
+            <tbody>
+                <tr>     <!--tr은 행 구분, td는 데이터 셀-->
+                    <td>자바</td><td>공부중</td>
+                </tr>
+                <tr>
+                    <td>C</td><td>작성중</td>
+                </tr>  
+                <tr>
+                    <td>표 안에 사진 첨부</td><td><img src="./Img/XP-HD-Wallpapers-022.jpg" alt="이미지 누락" width="100" height="100"></td>
+                </tr>
+            </tbody>
+            <tfoot> <!--바닥셀-->
+                <tr><th>바닥셀은 th이용해 작성</th></tr>
+            </tfoot>
+        </table>
+        <table border="1"> 
+            <thead>
+               <!-- <th>비정형 표 생성</th> // thead생략 가능, tr 미 작성--> 
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3">A</td>
+                    <td colspan="2">B</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">C</td>
+                    <td>D</td>
+                </tr>
+                <tr>
+                    <td>E</td>
+                </tr>
+            </tbody>
+        </table>    <!--tfoot 생략-->
 
+        a태그의 href 속성을 이용하여 하이퍼링크 작성 가능<br>
+        같은 웹 사이트에 있는 웹 페이지 연결<br>
+
+        <a href=".html">해당 사이트로 이동</a><br>    
+        다른 웹 사이트의 웹 페이지 연결<br>  
+        <a href="http://www.naver.com">네이버</a><br>     
+        이미지 하이퍼링크 생성<br>
+        <a href="http://www.naver.com">
+            <img src="Img/p_1IEyQ8rYenO9YgAFp_LHIAW46kn6DXT0VKmZ_jKNijvYth9DieYZuJX_E_H_4GkCER_sVKhMqSyQYoW94JKA.svg" alt="네이버 사이트" width="50" height="50">
+        </a><br>
         
+        a태그 target 속성<br>
+        <a target="_blank|_self|_parent|_top|프레임 이름"></a><br>
+        blank: 링크된 문서를 새로운 윈도우나 탭(Tab)에서 오픈<br>
+        self: 링크된 문서를 링크가 위치한 현재 프레임에서 오픈, 기본값으로 생략가능<br>
+        parent: 링크된 문서를 현재 프레임의 부모 프레임에서 오픈<br>
+        top: 링크된 문서를 현재 윈도우 전체에서 오픈<br>
+        프레임 이름: 링크된 문서를 명시된 프레임에서 오픈<br>
+        <H2>링크의 target속성 활용</H2>
+        <ul>
+            <li> <a href="http://www.w3.org" target=_blank>W3C(새 윈도우,_blank)</a></li>
+            <li> <a href="http://www.etnews.com" target="_self">전자신문(현재 윈도우,_self)</a> </li>
+            <li> <a href="http://www.naver.com" target=_parent>네이버(부모 윈도우, _parent)</a></li>
+            <li> <a href="http://www.mk.co.kr" target="_top">매일경제신문(브라우저 윈도우,_top)</a> </li>
+        </ul><br>
 
+        <a href="#start">맨 위로 가기</a><br>
+        <a href="#앵커 사용하기">앵커 사용하기</a><br>
+
+        파일 다운로드 링크<br>
+        <a href="./Img/XP-HD-Wallpapers-022.jpg">배경화면 다운로드</a><br>
+
+        인라인 프레임<br>
+        <!--html 페이지 내에 내장 윈도우를 만들고 다른 HTML 페이지 삽입
+            inframe태그는 body태그 내에서만 사용
+            src 속성 생략시 브라우저에 inframe 영역이 만들어지긴 하지만 빈상태로 존재
+            srcdoc 속성 지정 및 활용은 브라우저의 지원 여부에 달려있다
+            인라인 프레임 안에 또 다른 인라인 프레임을 중첩하여 생성 가능
+            
+            <inframe src="URL"
+                     srcdoc="HTML 문서 텍스트"
+                     name="윈도우 이름"
+                     width="프레임 폭"
+                     height="프레임 높이">
+                inframe 태그를 다루지 않는 브라우저에 의해 대신 출력되는 텍스트
+            </iframe>
+
+            src: 출력할 웹페이지의 URL 주소
+            srcdoc: 직접 HTNL 태그로 작성된 텍스트로서 출력될 내용
+            name: 프레임 윈도우의 이름. 다른 웹 페이지에서 target속성 값으로 사용 → 삽입된 윈도우의 이름
+        -->
+
+        <iframe src="iframe1.html" width="300" height="300"></iframe><br>
+        <iframe src="iframe2.html" srcdoc="<html><head></head><body>hello</body></html>" width="300" height="300"></iframe><br>
+        <!--srcdoc 속성이 있으면 src 속성은 무시, 단 브라우저가 지원할 경우-->
+        <iframe src="http://www.etnews.com" width="300" height="300"></iframe><br>
+    
     </body>
 </html> 
