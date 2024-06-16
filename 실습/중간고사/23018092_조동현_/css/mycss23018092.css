@@ -1,0 +1,100 @@
+body {
+    height: 100vh;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .test2024 {
+    padding: 50px 0;
+  }
+  .containerA{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  .item {
+    width: 80px;
+    height: 84px;
+    margin: 4px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #555;
+    transform: skewX(-14deg);
+    transition:
+      transform .1s,
+      background-color .6s;
+  }
+  .item:hover {
+    background-color: #ff9c00;
+    transition: 2s ease-in-out transform, 10s ease-out filter;
+    transform: skewX(-14deg) scale(2);
+    z-index: 1;
+    filter: brightness(200%);
+  }
+  .item:active {
+    transition-duration: 0.6s;
+    transform: translateX(0px);
+    border-radius: 100px;
+    transition: transform 2s, border-radius 2s, visibility 2s;
+    visibility: hidden;
+  }
+
+  .item .image {
+    width: 140%;
+    height: 100%;
+    transform: translateX(-16px) skewX(14deg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90px;
+  }
+  .item:nth-child(1) { background-color:orange }
+  .item:nth-child(3) { background-color:orange }
+  .item:nth-child(5) { background-color:orange }
+  .item:nth-child(7) { background-color:orange }
+  .item:nth-child(9) { background-color:orange }
+  .item:nth-child(11) { background-color:orange }
+  .item:nth-child(13) { background-color:orange }
+  .item:nth-child(15) { background-color:orange }
+  .item:nth-child(17) { background-color:orange }
+  .item:nth-child(19) { background-color:orange }
+  .item:nth-child(21) { background-color:orange }
+  .item:nth-child(23) { background-color:orange }
+  .item:nth-child(25) { background-color:orange }
+  .item:nth-child(27) { background-color:orange }
+  .item:nth-child(29) { background-color:orange }
+  .item:nth-child(31) { background-color:orange }
+  
+  .item:nth-child(2) { background-color:white }
+  .item:nth-child(4) { background-color:white }
+  .item:nth-child(6) { background-color:white }
+  .item:nth-child(8) { background-color:white }
+  .item:nth-child(10) { background-color:white }
+  .item:nth-child(12) { background-color:white }
+  .item:nth-child(14) { background-color:white }
+  .item:nth-child(16) { background-color:white }
+  .item:nth-child(18) { background-color:white }
+  .item:nth-child(20) { background-color:white }
+  .item:nth-child(22) { background-color:white }
+  .item:nth-child(24) { background-color:white }
+  .item:nth-child(26) { background-color:white }
+  .item:nth-child(28) { background-color:white }
+  .item:nth-child(30) { background-color:white }
+  .item:nth-child(32) { background-color:white }
+
+
+
+  .logo {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .logo img {
+    width: 100%;
+  }
+  
