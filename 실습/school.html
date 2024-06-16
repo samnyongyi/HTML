@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <Title>Document</Title>
+        <!--
+        <style>
+            .warning{color:red; font-size:20px;}
+            #list{background:mistyrose; color:green}
+            li:hover{font-size:50px; background: blue;}
+            li:active{font-size:10px; background: red;}
+            ul li:nth-child(6){color: orange;}
+            ul li:last-child{color: purple;}
+            li:first-child{color: gray;} 
+            ul *:not(#xyz){background:red;}
+        </style>-->
+        <style>
+            .box li:nth-child(5)::before{
+                color: red;
+                content: "추가하기";     
+            }
+            .box li:active::before{
+                color: red;
+                content: "추가하기";   
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+
+        </div>
+        <!--
+        <div class="warning"> Warning</div>
+        <ul>
+            <li> AaaaaaA</li>
+            <li class="warning">AaaaaA</li>
+            <li id="list">AaaaaaA</li>
+            <li class="warning">AaaaaA</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li id="xyz">4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+        -->
+
+    </body>
+</html>
